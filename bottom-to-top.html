@@ -1,0 +1,22 @@
+<button id="bottomToTop" class="fixed-bottom start-auto m-3 p-2 rounded-circle opacity-0 transition-all duration-500" style="height:3rem; width:3rem;">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+  </svg>
+</button>
+
+<script>
+  window.onscroll = function(){
+		var scrollValue = window.pageYOffset;
+    if(scrollValue >800){
+      document.querySelector('#upper').classList.remove('opacity-0');
+      document.querySelector('#upper').classList.add('opacity-100');
+    }else{
+      document.querySelector('#upper').classList.remove('opacity-100');
+      document.querySelector('#upper').classList.add('opacity-0');
+    }
+  }
+  
+  document.querySelector('#upper').addEventListener("click",function(){
+    window.scrollTo(0,0);
+  });
+</script>
